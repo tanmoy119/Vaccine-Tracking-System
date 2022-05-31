@@ -6,17 +6,19 @@ import Logo from './Logo';
 function Navbar() {
   return (
       <Nav>
-          <Link href='/' ><LogoDiv><Logo/></LogoDiv></Link>
+          <Link  href='/' ><LogoDiv><Logo/></LogoDiv></Link>
           <NavManu>
-              <Link href='/'><span>Home</span></Link>
-              <Link href='/'><span>Vaccine Tracker</span></Link>
-              <Link href='/'><span>About</span></Link>
-              <Link href='/'><span>Prevent</span></Link>
-              <Link href='/'><span>Experts</span></Link>
-              <Link href='/'><span>Contact Us</span></Link>
-              <Link href='/'><span>Blogs</span></Link>
+              <Link href='/'><a><span>Home</span></a></Link>
+              <Link href='/'><a><span>Vaccine Tracker</span></a></Link>
+              <Link href='/'><a><span>About</span></a></Link>
+              <Link href='/'><a><span>Prevent</span></a></Link>
+              <Link href='/'><a><span>Experts</span></a></Link>
+              <Link href='/'><a><span>Contact Us</span></a></Link>
+              <Link href='/'><a><span>Blogs</span></a></Link>
 
           </NavManu>
+
+          <Link href='/profile'><ProfileImg src='https://ps.w.org/metronet-profile-picture/assets/icon-256x256.png?rev=2464419' /></Link>
 
 
 
@@ -33,6 +35,7 @@ width: 100vw;
 background-color: #1e1e30;
 display: flex;
 align-items: center;
+color:#eee;
 
 
 
@@ -45,17 +48,34 @@ left:28px;
 top:0px;
 `
 
+const ProfileImg = styled.img`
+cursor: pointer;
+position: fixed;
+right: 20px;
+height: 38px;
+width:38px;
+border-radius: 50%;
+`
+
 const NavManu = styled.div`
     display: flex;
     position: absolute;
     right: 100px;
+   
+
+    a{
+        color: #eee;
+
+        text-decoration: none;
+        
 
         span{
             font-size: 18px;
             letter-spacing: 0.05px;
             cursor: pointer;
-            text-decoration: none;
-            margin: 10px;
+            
+            margin: 0 10px;
+            position: relative;
 
             &:after{
                 content:"";
@@ -71,12 +91,15 @@ const NavManu = styled.div`
                 transform: scaleX(0);
             }
 
+        }
+            
             &:hover{
                 span:after {
                     opacity: 1;
-                    transform: scaleX(1);
+                    transform:scaleX(1);
                   }
             }
-        }
+
+    }
 
 `

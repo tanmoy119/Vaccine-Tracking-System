@@ -3,8 +3,8 @@ import styled from 'styled-components';
 const Logo = ()=> {
   return (
     <Logodiv>
-        <h2>Covid -19</h2>
-        <h2>Covid -19</h2>
+        <h2>Covid -India</h2>
+        <h2>Covid -India</h2>
     </Logodiv>
   )
 }
@@ -17,7 +17,7 @@ const Logodiv = styled.div`
         justify-content:center;
         align-items:center;
         height:70px;
-        width:240px;
+        width:400px;
        // background: #090b13;
         position:relative;
 
